@@ -4,7 +4,14 @@
   @each $theme, $color in $themes {
     &.#{$theme} {
       #{$property}: map-get($color, $key);
-      @debug $property, $key
     }
   }
-}
+};
+
+@mixin themifySelf($property, $key) {
+  @each $theme, $color in $themes {
+    & {
+      #{$property}: map-get($color, $key);
+    }
+  }
+};
