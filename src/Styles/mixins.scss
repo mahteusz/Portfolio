@@ -1,0 +1,17 @@
+@import './variables.scss';
+
+@mixin themify($property, $key) {
+  @each $theme, $color in $themes {
+    &.#{$theme} {
+      #{$property}: map-get($color, $key);
+    }
+  }
+};
+
+@mixin themify-pseudo-element($pseudo, $property, $key) {
+  @each $theme, $color in $themes {
+    &.#{$theme}::#{$pseudo} {
+      #{$property}: map-get($color, $key);
+    }
+  }
+};

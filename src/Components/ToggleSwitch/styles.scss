@@ -1,0 +1,30 @@
+@import '../../Styles/mixins.scss';
+
+input[type=checkbox] {
+  appearance: none;
+  width: 4.5rem;
+  height: 2.2rem;
+  @include themify(background-color, primary);
+  @include themify-pseudo-element(before, background-color, background);
+  border-radius: 5rem;
+  border: 0;
+  cursor: pointer;
+  position: relative;
+
+  &:before {
+    content: "";
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 0.3rem;
+    left: 0.4rem;
+    transition: 0.3s ease;
+  }
+
+  &:checked:before {
+    left: 2.5rem;
+  }
+}
+
+;
