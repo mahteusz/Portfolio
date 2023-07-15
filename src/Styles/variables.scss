@@ -1,0 +1,16 @@
+$dark: (
+  primary: #AF1B3F,
+  background: #2A2B2A,
+  text: #F8F4E3,
+);
+
+$light: (
+  primary: #AF1B3F,
+  background: #F8F4E3,
+  text: #2A2B2A,
+);
+
+$themes: (
+  dark: $dark,
+  light: $light
+);

@@ -1,0 +1,10 @@
+@import './variables.scss';
+
+@mixin themify($property, $key) {
+  @each $theme, $color in $themes {
+    &.#{$theme} {
+      #{$property}: map-get($color, $key);
+      @debug $property, $key
+    }
+  }
+}
