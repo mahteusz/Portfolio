@@ -1,11 +1,11 @@
-import ToggleSwitch from './Components/ToggleSwitch'
 import { ThemeProvider } from './Contexts'
+import { Home } from './Pages'
 
 const App = () => {
 
   return (
     <ThemeProvider>
-      <ToggleSwitch onChange={() => {}}/>
+      <Home />
     </ThemeProvider>
   )
 }
