@@ -24,15 +24,15 @@ header {
   }
 
   &.active {
-    > :nth-child(1) {
+    :nth-child(1) {
       transform: rotate(-45deg) translate(-0.7rem, 0.7rem);
     }
 
-    > :nth-child(2) {
+    :nth-child(2) {
       opacity: 0;
     }
 
-    > :nth-child(3) {
+    :nth-child(3) {
       transform: rotate(45deg) translate(-0.4rem, -0.4rem);
     }
   }

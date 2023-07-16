@@ -1,7 +1,6 @@
 @import './variables.scss';
 
 @mixin themify($property, $key) {
-  @debug &;
   @each $theme, $color in $themes {
     &.#{$theme} {
       #{$property}: map-get($color, $key);
@@ -16,3 +15,10 @@
     }
   }
 };
+
+@mixin spacify($property, $size) {
+  @debug $property;
+  & {
+    #{$property}: map-get($spaces, $size);
+  }
+}
