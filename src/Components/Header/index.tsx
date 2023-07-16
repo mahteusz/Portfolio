@@ -8,10 +8,10 @@ const Header = () => {
 
   return (
     <header className={`${themeData.theme}`} onClick={() => setNavbarOpen(!navbarOpen)}>
-      <div className={`hamburguer-container ${navbarOpen ? 'active' : ''}`}>
-        <div className={`hamburguer-line ${themeData.theme}`} />
-        <div className={`hamburguer-line ${themeData.theme}`} />
-        <div className={`hamburguer-line ${themeData.theme}`} />
+      <div className={`hamburguer ${navbarOpen ? 'active' : ''}`}>
+        <div className={`hamburguer__line ${themeData.theme}`} />
+        <div className={`hamburguer__line ${themeData.theme}`} />
+        <div className={`hamburguer__line ${themeData.theme}`} />
       </div>
     </header>
   )

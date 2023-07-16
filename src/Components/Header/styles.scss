@@ -11,7 +11,7 @@ header {
   @include themify(border-bottom-color, primary);
 };
 
-.hamburguer-container {
+.hamburguer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,6 +21,14 @@ header {
 
   &:hover {
     cursor: pointer;
+  }
+
+  &__line {
+    width: 2.5rem;
+    height: 0.4rem;
+    margin: 0.2rem 0;
+    transition: transform ease 0.3s;
+    @include themify(background-color, primary);
   }
 
   &.active {
@@ -38,10 +46,10 @@ header {
   }
 };
 
-.hamburguer-line {
-  width: 2.5rem;
-  height: 0.4rem;
-  margin: 0.2rem 0;
-  transition: transform ease 0.3s;
-  @include themify(background-color, primary);
-};
+// .hamburguer__line {
+//   width: 2.5rem;
+//   height: 0.4rem;
+//   margin: 0.2rem 0;
+//   transition: transform ease 0.3s;
+//   @include themify(background-color, primary);
+// };
