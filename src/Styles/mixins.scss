@@ -17,8 +17,15 @@
 };
 
 @mixin spacify($property, $size) {
-  @debug $property;
   & {
     #{$property}: map-get($spaces, $size);
+  }
+}
+
+@mixin fontify($font, $weight, $size) {
+  & {
+    #{font-family}: #{map-get($fonts, $font), sans-serif};
+    #{font-weight}: $weight;
+    #{font-size}: map-get($fonts-sizes, $size);
   }
 }
