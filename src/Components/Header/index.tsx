@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useTheme } from '../../Contexts/useTheme'
+import { ToggleSwitch } from '..'
 import './styles.scss'
 
 const Header = () => {
@@ -34,6 +35,8 @@ const Header = () => {
           <li className={`menu__navigation-item`}>Projetos</li>
         </nav>
       </div>
+      <h1>LOGO</h1>
+      <ToggleSwitch onChange={themeData.toggleTheme}/>
     </header>
   )
 }

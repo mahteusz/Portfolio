@@ -5,10 +5,13 @@ header {
   align-items: center;
   justify-content: center;
   position: sticky;
-  border-bottom: 0.2rem solid;
+  border-bottom: 0.1rem solid;
   display: flex;
   justify-content: space-between;
+  @include spacify(padding, large);
   @include themify(border-bottom-color, primary);
+  @include themify(background-color, background);
+  @include themify(color, text);
 };
 
 .hamburguer {
@@ -55,7 +58,7 @@ header {
     flex-direction: column;
     align-items: center;
     width: 30rem;
-    @include themify(background-color, primary);
+    @include themify(background-color, background);
     list-style-type: none;
     transform: translateX(-100%);
     opacity: 0;
