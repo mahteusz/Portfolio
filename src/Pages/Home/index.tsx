@@ -1,6 +1,6 @@
 import './styles.scss'
 import { Header } from '../../Components'
-import { useTheme } from '../../Contexts/useTheme'
+import { useTheme } from '../../Contexts/ThemeContext/useTheme'
 
 const Home = () => {
   const themeData = useTheme()

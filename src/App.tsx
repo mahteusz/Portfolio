@@ -1,4 +1,4 @@
-import { ThemeProvider } from './Contexts'
+import { ThemeProvider } from './Contexts/ThemeContext'
 import { Home } from './Pages'
 
 const App = () => {
