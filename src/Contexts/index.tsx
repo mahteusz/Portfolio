@@ -2,9 +2,10 @@ import { createContext, useState, useEffect } from "react";
 import { Themes, ThemeContextData, ThemeProviderData } from "./types";
 
 const ThemeContext = createContext<ThemeContextData>({} as ThemeContextData)
+const initialTheme = Themes.LIGHT
 
 const ThemeProvider = ({ children }: ThemeProviderData) => {
-  const [theme, setTheme] = useState<Themes>(Themes.LIGHT)
+  const [theme, setTheme] = useState<Themes>(initialTheme)
   const [loading, setLoading] = useState<boolean>(true)
 
   useEffect(() => {
@@ -35,4 +36,4 @@ const ThemeProvider = ({ children }: ThemeProviderData) => {
   )
 };
 
-export { ThemeProvider, ThemeContext };
+export { ThemeProvider, ThemeContext, initialTheme };
