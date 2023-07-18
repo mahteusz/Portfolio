@@ -1,5 +1,6 @@
 import { createContext, useState, useEffect } from "react";
 import { Themes, ThemeContextData, ThemeProviderData } from "./types";
+import { useTheme } from "./useTheme";
 
 const ThemeContext = createContext<ThemeContextData>({} as ThemeContextData)
 const initialTheme = Themes.LIGHT
@@ -36,4 +37,4 @@ const ThemeProvider = ({ children }: ThemeProviderData) => {
   )
 };
 
-export { ThemeProvider, ThemeContext, initialTheme };
+export { ThemeProvider, ThemeContext, initialTheme, useTheme };

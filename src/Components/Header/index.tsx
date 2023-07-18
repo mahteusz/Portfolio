@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
-import { useTheme } from '../../Contexts/ThemeContext/useTheme'
+import { useTheme } from '../../Contexts/'
 import { ToggleSwitch } from '..'
 import './styles.scss'
-import { initialTheme } from '../../Contexts/ThemeContext/'
+import { initialTheme } from '../../Contexts/'
 
 const Header = () => {
   const [navbarOpen, setNavbarOpen] = useState<boolean>(false)

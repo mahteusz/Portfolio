@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import "./styles.scss"
-import { useTheme } from '../../Contexts/ThemeContext/useTheme'
+import { useTheme } from '../../Contexts/'
 import ToggleSwitchProps from "./types"
 
 const ToggleSwitch = ({ onChange, initialChecked }: ToggleSwitchProps) => {
