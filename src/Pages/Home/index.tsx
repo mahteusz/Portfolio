@@ -1,5 +1,5 @@
 import './styles.scss'
-import { Header } from '../../Components'
+import { Header, Main } from '../../Components'
 import { useTheme } from '../../Contexts/'
 
 const Home = () => {
@@ -8,6 +8,7 @@ const Home = () => {
   return (
     <div className={`container ${themeData.theme}`}>
       <Header />
+      <Main />
     </div>
   )
 }
