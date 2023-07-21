@@ -32,7 +32,7 @@ const Main = () => {
       <span className={`main-container__content ${themeData.theme} ${showContent ? 'visible' : ''}`}>
         Sou um Desenvolvedor Front-end com experiência em React.js, JavaScript, TypeScript,
         Styled Components, Sass e consumo de APIs REST. Também escrevo código back-end, utilizando 
-        principalmente Node, Express e MongoDB. Sou Apaixonado por tecnologia e por programação
+        principalmente Node, Express e MongoDB. Sou apaixonado por tecnologia e por programação
         em geral e possuo graduação e mestrado em Ciência da Computação.
       </span>
     </main>
