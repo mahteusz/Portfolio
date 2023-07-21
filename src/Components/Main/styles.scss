@@ -1,3 +1,36 @@
-div {
-  align-self: center;
+@import '../../Styles/mixins.scss';
+
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @include themify(color, text);
+  @include spacify(gap, small);
+
+  &__title {
+    @include themify(color, primary);
+    @include fontify(primary, bold, x-large);
+    display: inline;
+  }
+
+  &__subtitle {
+    @include themify(color, primary);
+    @include fontify(primary, bold, large);
+  }
+
+  &__content {
+    @include themify(color, grey);
+    @include fontify(secondary, 400, medium);
+    text-align:center;
+    max-width: 60%;
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+
+  &__content.visible {
+    opacity: 1;
+  }
 }
