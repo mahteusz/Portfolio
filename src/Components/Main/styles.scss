@@ -1,15 +1,47 @@
 @import '../../Styles/mixins.scss';
 
-.main-container {
+main {
   width: 100vw;
   height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include themify(background-color, background);
+}
+
+.content-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
+  width: 40%;
   @include themify(color, text);
-  @include themify(background-color, background);
   @include spacify(gap, small);
+  @include spacify(padding, medium);
+  @include themify-pseudo-element(before, border-color, primary);
+  @include themify-pseudo-element(after, border-color, primary);
+
+  &::before, &::after {
+    position: absolute;
+    content: "";
+    width: 7rem;
+    height: 7rem;
+  };
+
+  &::before {
+    top: -1rem;
+    left: -1rem;
+    border-top: 0.4rem solid;
+    border-left: 0.4rem solid ;
+  }
+
+  &::after {
+    bottom: -1rem;
+    right: -1rem;
+    border-bottom: 0.4rem solid;
+    border-right: 0.4rem solid;
+  }
 
   &__title {
     @include themify(color, primary);
@@ -25,8 +57,7 @@
   &__content {
     @include themify(color, grey);
     @include fontify(secondary, 400, medium);
-    text-align:center;
-    max-width: 60%;
+    text-align: center;
     opacity: 0;
     transition: opacity 1s ease;
   }
