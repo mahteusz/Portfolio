@@ -28,15 +28,13 @@ const Main = () => {
   return (
     <main className={`main-container ${themeData.theme}`}>
       <div 
-        className={`content-container ${themeData.theme}
-        ${showContent ? 'visible move' : ''}`}
+        className={`content-container ${themeData.theme}`}
       >
         <h1 className={`content-container__title ${themeData.theme}`}>
           {introTyping.text}
         </h1>
         <h2 
-          className={`content-container__subtitle ${themeData.theme}
-          ${showContent ? 'visible' : ''}`}
+          className={`content-container__subtitle ${themeData.theme}`}
         >
           {devTyping.text}
           </h2>

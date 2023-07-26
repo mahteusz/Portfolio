@@ -13,7 +13,8 @@ header {
   @include themify(border-bottom-color, primary);
   @include themify(background-color, background);
   @include themify(color, text);
-  box-shadow: 0 0.4rem 0.3rem #{map-get($dark, primary)}, 
+  box-shadow: 0 0.4rem 0.3rem #{map-get($dark, primary)};
+  z-index:1;
 };
 
 
@@ -24,7 +25,6 @@ header {
   align-items: center;
   width: 3rem;
   height: 3rem;
-  z-index: 1;
 
   &:hover {
     cursor: pointer;
@@ -51,7 +51,6 @@ header {
 
   &.open {
     opacity: 1;
-    z-index: 2;
     visibility: visible;
   }
 

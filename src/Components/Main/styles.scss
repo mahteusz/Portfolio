@@ -20,7 +20,7 @@ main {
   @include spacify(gap, small);
   @include spacify(padding, medium);
   @include themify-pseudo-element(before, border-color, primary);
-  @include themify-pseudo-element(after, border-color, primary);
+  @include themify-pseudo-element(after, border-color, primary);  
 
   &__title {
     @include themify(color, primary);
@@ -43,18 +43,9 @@ main {
     transition: all 0.8s ease;
   }
 
-  .visible {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .move {
-    transform: translateY(0);
-  }
-
   &__actions {
     display: flex;
-    width: 100%;
+    width: 60%;
     justify-content: space-evenly;
     @include spacify(margin, small);
     opacity: 0;
@@ -94,5 +85,14 @@ main {
         box-shadow: 0.5rem 0.5rem #{map-get($dark, primary)};
       }
     }
+  }
+
+  .visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .move {
+    transform: translateY(0);
   }
 }
