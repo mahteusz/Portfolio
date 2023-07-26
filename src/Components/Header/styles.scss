@@ -13,7 +13,7 @@ header {
   @include themify(border-bottom-color, primary);
   @include themify(background-color, background);
   @include themify(color, text);
-  box-shadow: 0 0.4rem 0.5rem #{map-get($dark, primary)}, 
+  box-shadow: 0 0.4rem 0.3rem #{map-get($dark, primary)}, 
 };
 
 

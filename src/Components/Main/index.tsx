@@ -20,7 +20,7 @@ const Main = () => {
   }, [introTyping.finished])
 
   useEffect(() => {
-    if(devTyping.finished)
+    if (devTyping.finished)
       setShowContent(true)
 
   }, [devTyping.finished])
@@ -32,10 +32,18 @@ const Main = () => {
         <h2 className={`content-container__subtitle ${themeData.theme}`}>{devTyping.text}</h2>
         <span className={`content-container__content ${themeData.theme} ${showContent ? 'visible' : ''}`}>
           Sou um Desenvolvedor Front-end com experiência em React.js, JavaScript, TypeScript,
-          Styled Components, Sass e consumo de APIs REST. Também escrevo código back-end, utilizando, 
+          Styled Components, Sass e consumo de APIs REST. Também escrevo código back-end, utilizando,
           principalmente, Node, Express e MongoDB. Sou apaixonado por tecnologia e por programação
           em geral e possuo graduação e mestrado em Ciência da Computação.
         </span>
+        <div className={`content-container__actions ${themeData.theme}`}>
+          <button className={`content-container__button content-container__button--contained ${themeData.theme}`}>
+            Baixar currículo
+          </button>
+          <button className={`content-container__button content-container__button--outlined ${themeData.theme}`}>
+            Entrar em contato
+          </button>
+        </div>
       </div>
     </main>
   )
