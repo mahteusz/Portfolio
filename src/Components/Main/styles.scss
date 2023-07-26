@@ -15,36 +15,12 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 40%;
+  width: 50%;
   @include themify(color, text);
   @include spacify(gap, small);
   @include spacify(padding, medium);
   @include themify-pseudo-element(before, border-color, primary);
   @include themify-pseudo-element(after, border-color, primary);
-
-  &::before,
-  &::after {
-    content: "";
-    width: 7rem;
-    height: 7rem;
-    position: relative;
-  };
-
-  &::before {
-    top: -1rem;
-    left: -50%;
-    border-top: 0.4rem solid;
-    border-left: 0.4rem solid;
-    box-shadow: -0.4rem -0.4rem #{map-get($dark, secondary)};
-  }
-
-  &::after {
-    bottom: -1rem;
-    right: -50%;
-    border-bottom: 0.4rem solid;
-    border-right: 0.4rem solid;
-    box-shadow: 0.4rem 0.4rem #{map-get($dark, secondary)};
-  }
 
   &__title {
     @include themify(color, primary);
@@ -62,11 +38,18 @@ main {
     @include fontify(secondary, 400, medium);
     text-align: center;
     opacity: 0;
-    transition: opacity 1s ease;
+    visibility: hidden;
+    transform: translateY(5rem);
+    transition: all 0.8s ease;
   }
 
-  &__content.visible {
+  .visible {
     opacity: 1;
+    visibility: visible;
+  }
+
+  .move {
+    transform: translateY(0);
   }
 
   &__actions {
@@ -74,25 +57,29 @@ main {
     width: 100%;
     justify-content: space-evenly;
     @include spacify(margin, small);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(5rem);
+    transition: all 0.8s ease;
   }
 
   &__button {
     @include spacify(padding, x-small);
     @include fontify(secondary, 400, medium);
     border: 0;
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    transition: all 0.5s ease;
 
     &:hover {
       transform: scale(1.05);
       cursor: pointer;
     }
-    
+
     &--contained {
       @include themify(background-color, primary);
       @include themify(color, background);
 
       &:hover {
-        box-shadow: 0.5rem 0.5rem #{map-get($dark, secondary)}; 
+        box-shadow: 0.5rem 0.5rem #{map-get($dark, secondary)};
         @include themify(box-shadow, primary);
       }
     }
@@ -104,7 +91,7 @@ main {
       @include themify(color, primary);
 
       &:hover {
-        box-shadow: 0.5rem 0.5rem #{map-get($dark, primary)}; 
+        box-shadow: 0.5rem 0.5rem #{map-get($dark, primary)};
       }
     }
   }
