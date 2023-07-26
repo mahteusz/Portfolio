@@ -1,14 +1,12 @@
-import './styles.scss'
-import { Header } from '../../Components'
-import { useTheme } from '../../Contexts/'
+import { Header, Main } from '../../Components'
 
 const Home = () => {
-  const themeData = useTheme()
 
   return (
-    <div className={`container ${themeData.theme}`}>
+    <>
       <Header />
-    </div>
+      <Main />
+    </>
   )
 }
 

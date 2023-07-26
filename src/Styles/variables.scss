@@ -15,20 +15,24 @@ $fonts-sizes: (
   x-small: 1.2rem,
   small: 1.6rem,
   medium: 2rem,
-  large: 2.4rem,
-  x-large: 3.2rem
+  large: 2.8rem,
+  x-large: 4rem
 );
 
 $dark: (
   primary: #22AAA1,
+  secondary: #EC7357,
   background: #071013,
   text: #F0EFF4,
+  grey: #999999
 );
 
 $light: (
   primary: #22AAA1,
+  secondary: #EC7357,
   background: #F0EFF4,
   text: #071013,
+  grey: #828282
 );
 
 $themes: (

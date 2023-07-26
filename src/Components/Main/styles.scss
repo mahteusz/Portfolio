@@ -1,0 +1,98 @@
+@import '../../Styles/mixins.scss';
+@import '../../Styles/variables.scss';
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include themify(background-color, background);
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  @include themify(color, text);
+  @include spacify(gap, small);
+  @include spacify(padding, medium);
+  @include themify-pseudo-element(before, border-color, primary);
+  @include themify-pseudo-element(after, border-color, primary);  
+
+  &__title {
+    @include themify(color, primary);
+    @include fontify(primary, bold, x-large);
+    display: inline;
+  }
+
+  &__subtitle {
+    @include themify(color, primary);
+    @include fontify(primary, bold, large);
+  }
+
+  &__content {
+    @include themify(color, grey);
+    @include fontify(secondary, 400, medium);
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(5rem);
+    transition: all 0.8s ease;
+  }
+
+  &__actions {
+    display: flex;
+    width: 60%;
+    justify-content: space-evenly;
+    @include spacify(margin, small);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(5rem);
+    transition: all 0.8s ease;
+  }
+
+  &__button {
+    @include spacify(padding, x-small);
+    @include fontify(secondary, 400, medium);
+    border: 0;
+    transition: all 0.5s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      cursor: pointer;
+    }
+
+    &--contained {
+      @include themify(background-color, primary);
+      @include themify(color, background);
+
+      &:hover {
+        box-shadow: 0.5rem 0.5rem #{map-get($dark, secondary)};
+        @include themify(box-shadow, primary);
+      }
+    }
+
+    &--outlined {
+      border: 1px solid;
+      @include themify(border-color, primary);
+      @include themify(background-color, background);
+      @include themify(color, primary);
+
+      &:hover {
+        box-shadow: 0.5rem 0.5rem #{map-get($dark, primary)};
+      }
+    }
+  }
+
+  .visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .move {
+    transform: translateY(0);
+  }
+}

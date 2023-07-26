@@ -11,8 +11,7 @@ const Header = () => {
 
   useEffect(() => {
     setToggleSwitchChecked(themeData.theme != initialTheme)
-  }, [themeData.loading, themeData.theme])
-  console.log(toggleSwitchChecked)
+  }, [themeData.theme])
 
   const exitOnOuterClick = (e: React.MouseEvent<HTMLElement>) => {
     if (e.target != e.currentTarget)
