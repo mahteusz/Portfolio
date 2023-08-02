@@ -1,0 +1,40 @@
+@import '../../Styles/mixins.scss';
+
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @include themify(background-color, background);
+
+  &__title {
+    @include themify(color, text);
+    @include fontify(primary, bold, x-large);
+    display: inline;
+    text-transform: capitalize;
+  }
+
+  &__cards {
+    display:flex;
+    flex-wrap: wrap;
+    @include spacify(padding, x-large);
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__card-name {
+    @include themify(color, primary);
+  }
+
+  &__card-icon {
+    width: 6.4rem;
+    height: 6.4rem;
+  }
+
+}
+
