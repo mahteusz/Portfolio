@@ -1,0 +1,66 @@
+@import '../../Styles/mixins.scss';
+@import '../../Styles/variables.scss';
+
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @include themify(background-color, background);
+
+  &__title {
+    @include themify(color, primary);
+    @include fontify(primary, bold, x-large);
+    text-transform: capitalize;
+    border-bottom:0.2rem solid;
+    @include themify(border-color, secondary);
+    @include spacify(margin-bottom, small);
+  }
+
+  &__cards {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    @include spacify(padding, x-large);
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 15rem;
+    @include spacify(gap, small);
+    @include spacify(padding, small);
+    @include spacify(padding-left, x-large);
+    @include spacify(padding-right, x-large);
+    @include spacify(margin, small);
+    border: 0.1rem solid;
+    @include themify(border-color, primary);
+    transition: all 0.5s ease;
+  }
+
+  &__card:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 0.5rem 0.5rem #{map-get($dark, primary)};
+    @include themify(box-shadow, primary);
+  }
+
+  &__card-name {
+    @include themify(color, secondary);
+    @include fontify(secondary, bold, small);
+    text-align: center;
+  }
+
+  &__card-icon {
+    width: 6.4rem;
+    height: 6.4rem;
+  }
+
+  &__card-icon path {
+    fill: #{map-get($dark, primary)};
+  }
+}
