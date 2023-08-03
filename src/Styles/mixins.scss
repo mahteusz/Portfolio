@@ -1,7 +1,6 @@
 @import './variables.scss';
 
 @mixin themify($property, $key) {
-  @debug $key, $property;
   @each $theme, $color in $themes {
     &.#{$theme} {
       #{$property}: map-get($color, $key);
@@ -28,5 +27,12 @@
     #{font-family}: #{map-get($fonts, $font), sans-serif};
     #{font-weight}: $weight;
     #{font-size}: map-get($fonts-sizes, $size);
+  }
+}
+
+@mixin respond($breakpoint) {
+  @debug $breakpoint, map-get($breakpoints, $breakpoint);
+  @media (max-width: map-get($breakpoints, $breakpoint)) {
+    @content
   }
 }
